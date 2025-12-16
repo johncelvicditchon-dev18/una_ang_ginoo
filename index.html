@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Tangub City Global College</title>
+    <link rel="icon" href="logo-toggle.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+</head>
+<style>
+    body {
+        background: url("church.jpg") center/cover no-repeat fixed;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+        backdrop-filter: blur(10px);
+        margin: 0;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(5px);
+        z-index: -1;
+    }
+
+    .label1,
+    .label2 {
+        position: absolute;
+        left: 50px;
+        top: 12px;
+        pointer-events: none;
+        transition: all .1s ease;
+        font-size: 15px;
+
+    }
+
+    .ph-user,
+    .fa-unlock {
+        position: absolute;
+        left: 17px;
+        top: 16px;
+        color: white;
+    }
+
+
+    .password-field,
+    .username-field {
+        position: relative;
+    }
+
+    .username-field .notice,
+    .password-field .notice {
+        position: absolute;
+        right: 15px;
+        top: 40%;
+        transform: translateY(-40%);
+        color: maroon;
+        pointer-events: none;
+        transition: all .2s ease;
+        display: none;
+    }
+
+    .password-field .ph-eye,
+    .password-field .ph-eye-slash {
+        position: absolute;
+        right: 15px;
+        top: 40%;
+        transform: translateY(-40%);
+        display: none;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        transition: all .2s ease;
+        pointer-events: auto;
+    }
+
+    .login-form {
+        position: relative;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+    }
+
+    input[type="password"]::-webkit-password-toggle-button,
+    input[type="password"]::-ms-reveal {
+        display: none;
+        -webkit-appearance: none;
+    }
+
+    .login-form .email,
+    .login-form .pass {
+        border-radius: 33px;
+        padding: 15px 20px;
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+        margin-bottom: 13px;
+        width: 100%;
+        font-size: 15px;
+        outline: none;
+        color: white;
+        padding-left: 50px;
+    }
+
+    .login-form input:focus+label,
+    .login-form input:not(:placeholder-shown)+label {
+        top: -10px;
+        background: rgba(255, 166, 61, 0.9);
+        left: 28px;
+        padding: 2px 5px;
+        border-radius: 5px;
+        font-size: 11.5px;
+        color: white;
+    }
+
+    .btn-group button {
+        padding: 10px;
+        background: #00a300;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-group button:hover {
+        background: #008f00;
+    }
+
+    .loginword {
+        color: #fff;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .btn-group button i {
+        margin-right: 10px;
+    }
+
+    .message {
+        padding: 10px;
+        font-size: 15px;
+        color: #00a300;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.2);
+        margin-bottom: 16px;
+        display: none;
+        backdrop-filter: blur(40px);
+        box-shadow: 0 2px 16px rgba(0, 163, 0, 0.50);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .message i {
+        margin-right: 8px;
+
+    }
+
+
+    .loading {
+        display: none;
+        border: 2px solid #00a300;
+        width: 100%;
+        margin-bottom: 16px;
+        transition: all 1s ease;
+        animation: magtuyok 3s linear;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+
+    @keyframes magtuyok {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+
+
+    #footer {
+        z-index: -9999;
+        position: relative;
+        font-size: 10px;
+        top: 140px;
+        font-family: "Bebas Neue", sans-serif;
+
+    }
+
+    #footer h2 {
+        background: none;
+        font-size: 18px;
+        letter-spacing: 2px;
+        overflow: hidden;
+        color: white;
+        white-space: nowrap;
+        margin-bottom: 60px;
+
+    }
+
+    #typing {
+        display: inline-block;
+        animation: typing 11s steps(60, end) infinite, blink-caret 0.7s step-end infinite;
+    }
+
+    @keyframes typing {
+
+        0%,
+        10% {
+            max-width: 0;
+        }
+
+        10%,
+        50% {
+            max-width: 100%;
+        }
+
+
+        50%,
+        60% {
+            max-width: 100%;
+        }
+
+
+        60%,
+        100% {
+            max-width: 0;
+        }
+
+    }
+
+    @keyframes blink-caret {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    .unaangginoo {
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 4px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        transition: all 2s ease;
+        flex-direction: column;
+        margin-top: 70px;
+        overflow: hidden;
+    }
+
+    .login-wrapper {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        padding: 40px 30px;
+        backdrop-filter: blur(200px);
+        width: 100%;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.30);
+        text-align: center;
+        animation: fadeIn 3s ease forwards;
+        width: 350px;
+        max-width: 100%;
+
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(300px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .div-una1 {
+        animation: pagawashori 3s ease forwards;
+        transition: all 3s ease-in-out;
+    }
+
+    .div-una2 {
+        animation: pababaw 3s ease backwards;
+        transition: all 3s ease-in-out;
+    }
+
+    @keyframes pagawashori {
+        0% {
+            transform: translateY(-300px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(20px);
+            opacity: 1;
+
+
+        }
+
+    }
+
+    @keyframes pababaw {
+        0% {
+
+            transform: translateY(300px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .unaangginoo h1 {
+        margin: 0;
+    }
+
+    #una1 {
+        color: rgba(255, 166, 61, 0.9);
+        font-size: 120px;
+        margin-right: 200px;
+
+    }
+
+    #una2 {
+        color: #008f00;
+        font-size: 70px;
+
+    }
+
+
+    .main-div {
+        display: flex;
+        gap: 40px;
+    }
+
+
+    .text-switch {
+        position: relative;
+        height: 120px;
+        overflow: hidden;
+
+    }
+
+    .div-una2 {
+        position: relative;
+        height: 180px;
+        overflow: hidden;
+
+    }
+
+    .nothing-una {
+        left: 0;
+        width: 100%;
+        margin: 0;
+        font-size: 120px;
+        letter-spacing: 4px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        transform: translateY(100%);
+        opacity: 0;
+        animation: slideAnimation1 4s infinite;
+    }
+
+    .una1 {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        font-size: 120px;
+        letter-spacing: 4px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        transform: translateY(100%);
+        opacity: 0;
+        animation: slideAnimation 4s infinite;
+    }
+
+    .una1:nth-child(1),
+    .nothing-una:nth-child(1) {
+        color: rgba(255, 166, 61, 0.9);
+        animation-delay: 0s;
+    }
+
+    .una1:nth-child(2),
+    #una2:nth-child(2) {
+        color: white;
+        animation-delay: 2s;
+    }
+
+
+
+    @keyframes slideAnimation {
+
+        0%,
+        25% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        30%,
+        55% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+
+        60%,
+        100% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideAnimation1 {
+
+        0%,
+        25% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        30%,
+        55% {
+            transform: translate(0%);
+            opacity: 1;
+        }
+
+        60%,
+        100% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+    }
+
+    @media (min-width: 300px) and (max-width: 1200px) {
+        .main-div {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        #fullscreen,
+        #footer {
+            display: none;
+        }
+
+        #una1,
+        #una2 {
+            font-size: 25px;
+            transition: all 5s ease;
+        }
+
+
+        .login-wrapper {
+            width: 95%;
+        }
+
+        .una1 {
+            font-size: 30px;
+            letter-spacing: 2px;
+            position: absolute;
+            top: 40px;
+        }
+
+        .text-switch,
+        .div-una2 {
+            height: 70px;
+        }
+
+        .detail {
+            width: 70% !important;
+            height: auto;
+            max-height: 80%;
+        }
+
+        .login-wrapper1 {
+            margin-top: 85px;
+            width: 310px !important;
+        }
+
+
+    }
+
+    .div-detail {
+        z-index: 9998;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        position: fixed;
+    }
+
+    .detail {
+        padding: 30px 20px;
+        background: #252627;
+        z-index: 9999;
+        width: 25%;
+        top: 50%;
+        left: 50%;
+        height: 600px;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.20);
+        position: fixed;
+        border-radius: 10px;
+        overflow-y: auto;
+
+    }
+
+    .div-sign {
+        z-index: 998;
+        position: fixed;
+        background: rgba(0, 0, 0, .3);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .login-wrapper1 {
+        top: 50%;
+        left: 50%;
+        z-index: 999;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: rgba(255, 255, 255, .3);
+        border-radius: 20px;
+        padding: 40px 30px;
+        backdrop-filter: blur(200px);
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.30);
+        text-align: center;
+        width: 350px;
+        max-width: 100%;
+    }
+
+
+
+
+    .detail::-webkit-scrollbar {
+        display: none;
+    }
+
+    .div-detail h5 {
+        color: white;
+        font-size: 12px;
+    }
+
+    .devedetail {
+        text-align: center;
+
+    }
+
+    .img123 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        transition: all .1s ease;
+        margin: 50px auto;
+        border: 2px solid white;
+    }
+
+    .img123:hover {
+        transform: scale(1.7);
+    }
+
+    .detail h4 {
+        font-size: 20px;
+        color: white;
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 4px;
+    }
+
+    h3 {
+        color: white;
+        letter-spacing: 3px;
+    }
+
+    .close {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-end;
+        display: flex;
+        position: relative;
+    }
+
+    .close i {
+        color: white;
+        cursor: pointer;
+        font-size: 13px;
+        padding: 8px 10px;
+        border-radius: 50%;
+
+    }
+
+    .close i:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .dev {
+        z-index: 9999;
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        top: 9px;
+        right: 30px;
+        font-size: 12px;
+        transition: all .10s ease-in-out;
+        cursor: pointer;
+    }
+
+
+
+    .dev:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        padding: 2px 3px;
+    }
+
+    .fb,
+    .ins,
+    .github {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 2px 7px;
+    }
+
+    .fb:hover,
+    .ins:hover,
+    .github:hover {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+
+    }
+
+    h5 .fb,
+    h5 .ins,
+    h5 .github {
+        margin-left: 2px;
+    }
+
+    .create-account,
+    .logaccount {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .create-account .signup,
+    .logaccount .logloglog {
+        text-decoration: none;
+        color: white;
+        padding: 0 3px;
+        cursor: pointer;
+    }
+
+    .create-account .signup:hover,
+    .logaccount .logloglog:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+    }
+
+    .message {
+        position: relative;
+    }
+
+    .fa-x {
+
+        font-size: 11px;
+        color: black;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 3px;
+        cursor: pointer;
+        padding: 4px 5px;
+
+    }
+
+    .fa-x:hover {
+        background: rgba(19, 19, 19, 0.1);
+        box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.10);
+        border-radius: 50%;
+
+    }
+
+    .notification {
+        width: 95%;
+        position: relative;
+        background: #3c3c3c;
+        padding: 10px;
+        margin: 20px auto;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        color: #00a300;
+        box-shadow: 0 2px 16px rgba(0, 163, 0, 0.30);
+        font-size: 14px;
+        display: none;
+
+    }
+
+    .notification i {
+        margin-right: 5px;
+    }
+
+    .ph-user-plus,
+    .ph-sign-in {
+        font-size: 18px;
+
+    }
+
+    .btn-group button i {
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+    .message-match {
+        color: red;
+        font-size: 13px;
+
+
+    }
+
+    .pleasemessage {
+        width: 100%;
+        margin-bottom: 12px;
+        align-items: left;
+        justify-content: left;
+        display: flex;
+        margin-left: 20px;
+        display: none;
+
+    }
+
+    #fullscreen {
+        position: absolute;
+        right: 150px;
+        color: white;
+        top: 10px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+</style>
+
+<body id="body">
+
+    <div class="div-detail" id="popUpGwapo">
+        <div class="detail" id="popUpGwapo1">
+            <div class="close"><i class="fa-solid fa-x"></i></div>
+            <h4 class="devedetail">Developer Details</h4>
+            <div class="devimage">
+                <img class="img123" src="dev.jpg" alt="">
+            </div>
+            <h3>Personal Information</h3>
+            <hr>
+            <h5>Name: Johncel Vic C. Ditchon</h5>
+            <h5>Age: 19</h5>
+            <h5>Address: Upper Maloro, Tangub City</h5>
+            <h5>School: Tangub City Global College</h5>
+            <h5>Program: Computer Sciece</h5>
+            <h3>Contact</h3>
+            <hr>
+            <h5>Contact Number: 09630276471</h5>
+            <h5>Facebook: <a href="https://www.facebook.com/johncelvic.ditchon.7" target="_blank" class="fb">Johncel Vic
+                    Ditchon</a>
+            </h5>
+            <h5>Instagram: <a href="https://www.instagram.com/chaw_giwara/" class="ins" target="_blank">chaw_giwara</a>
+            </h5>
+            <h5>Github: <a target="_blank" href="https://github.com/johncelvicditchon-dev18"
+                    class="github">johncelvicditchon_chaw_giwara</a></h5>
+
+
+        </div>
+    </div>
+    <header>
+        <i class="ph ph-arrows-out" id="fullscreen"></i>
+        <a class="dev" id="devinfo">Developer Details</a>
+    </header>
+    <div class="main-div">
+        <div id="unaangginoo" class="unaangginoo">
+            <div class="text-switch">
+                <h1 class="una1">Una ang Ginoo</h1>
+                <h1 class="una1">God First</h1>
+            </div>
+            <div class="div-una2">
+                <h1 class="nothing-una" id="una2">Light of the World Website</h1>
+                <h1 class="nothing-una" id="una2">Lux Mundi Website</h1>
+            </div>
+        </div>
+        <div class="loading" id="loading"></div>
+        <div id="login-wrapper" class="login-wrapper">
+            <div class="logo">
+                <img src="logo-toggle.png" alt="">
+            </div>
+            <h2 class="loginword">Login</h2>
+
+            <form method="POST">
+                <div class="message" id="message"></div>
+
+                <div class="login-form username-field">
+                    <i class="ph ph-user"></i>
+                    <input type="text" id="username-log" class="email" name="username" placeholder=" ">
+                    <label class="label1">Username</label>
+                    <i class="fa-solid fa-circle-exclamation notice" id="notice"></i>
+                </div>
+                <div class="login-form password-field">
+                    <i class="fa-solid fa-unlock"></i>
+                    <input type="password" class="pass" id="password-log" name="password" placeholder=" ">
+                    <label class="label2">Password</label>
+                    <i class="fa-solid fa-circle-exclamation notice" id="notice1"></i>
+                    <i class="ph ph-eye" id="show-log"></i>
+                    <i class="ph ph-eye-slash" id="donotshow-log"></i>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" onclick="login(event, this.form)" id="loginbutton"><i
+                            class="ph ph-sign-in"></i>Login</button>
+                </div>
+            </form>
+            <div class="create-account">
+                <label>Dont have an account? <label class="signup" id="signup">Sign Up</label> </label>
+            </div>
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <h2 id="typing">“I can do all things through Christ who strengthens me.” – Philippians 4:13</h2>
+    </footer>
+</body>
+<script src="index.js"></script>
+
+</html>

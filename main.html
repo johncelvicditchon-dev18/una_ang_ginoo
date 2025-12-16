@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page | Tangub City Global College</title>
+    <link rel="icon" href="logo-toggle.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    p {
+        font-size: 14px;
+
+    }
+
+    @media (max-width: 576px) {
+        .header {
+            flex-direction: column;
+            align-items: stretch;
+
+        }
+
+        #fullscreen {
+            display: none;
+        }
+
+        .header-left {
+            flex-direction: column;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .header h3 {
+            font-size: 1rem;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .navigation {
+            flex-direction: column;
+        }
+
+        .navinavi {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navigation a {
+            margin: 0.5rem 0;
+        }
+
+        section {
+            padding: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .image-row img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container1 {
+            width: 200px;
+        }
+
+        .video-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        .justify,
+        #justify,
+        #unique1 {
+            text-align: justify;
+        }
+
+        #reacts img {
+            width: 100%;
+        }
+
+        #tipshow {
+            overflow: auto;
+        }
+
+        #asd {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #tipshow .container1 {
+            width: auto;
+            min-width: 80%;
+            display: inline-block;
+            margin-right: 10px;
+            box-sizing: border-box;
+            text-align: left;
+
+        }
+
+        #cona {
+            width: auto;
+        }
+
+        #information-img,
+        #information-img1,
+        #heart {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #reacts {
+            margin: 0;
+        }
+
+        #two,
+        #asdasd {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+    }
+
+
+    @media (min-width: 577px) and (max-width: 992px) {
+        .header {
+            padding: 0.5rem 1rem;
+        }
+
+        #fullscreen {
+            display: none;
+        }
+
+        .justify,
+        #justify,
+        #unique1 {
+            text-align: justify;
+        }
+
+        #reacts img {
+            width: 100%;
+        }
+
+        #tipshow {
+            overflow: auto;
+        }
+
+        #asd {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #tipshow .container1 {
+            width: auto;
+            min-width: 80%;
+            display: inline-block;
+            margin-right: 10px;
+            box-sizing: border-box;
+            text-align: left;
+
+        }
+
+        #cona {
+            width: auto;
+        }
+
+        #information-img,
+        #information-img1,
+        #heart {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #reacts {
+            margin: 0;
+        }
+
+        #two,
+        #asdasd {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .header h3 {
+            font-size: 1.2rem;
+        }
+
+        .navigation a {
+            font-size: 0.9rem;
+        }
+
+        section {
+            padding: 1.5rem;
+        }
+
+        .image-row img {
+            max-width: 45%;
+            height: auto;
+        }
+
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+        .header {
+            padding: 0.8rem 1.2rem;
+        }
+
+        #fullscreen {
+            display: none;
+        }
+
+        .header h3 {
+            font-size: 1.4rem;
+        }
+
+        .navigation a {
+            font-size: 1rem;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        .image-row img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        .justify,
+        #justify,
+        #unique1 {
+            text-align: justify;
+        }
+
+        #reacts img {
+            width: 100%;
+        }
+
+        #tipshow {
+            overflow: auto;
+        }
+
+        #asd {
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        #tipshow .container1 {
+            width: auto;
+            min-width: 50%;
+            display: inline-block;
+            margin-right: 10px;
+            box-sizing: border-box;
+            text-align: left;
+
+        }
+
+
+    }
+
+    * {
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    body {
+
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+        background: rgba(255, 166, 61, 0.9);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+
+    .header {
+        background: #FFFFFF;
+        backdrop-filter: blur(25px);
+        padding: 0 20px;
+        display: flex;
+        gap: 500px;
+        position: sticky;
+        top: 10px;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        width: 88%;
+        border-radius: 62px;
+        transition: all 0.3s ease;
+        margin: 0 auto;
+        height: 85px;
+
+    }
+
+
+    .header h3 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 600;
+        color: #fff;
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    }
+
+    .logo {
+        width: 0px;
+        height: 30px;
+        border-radius: 60%;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        animation: poping 2s infinite;
+    }
+
+    @keyframes poping {
+        0% {
+            transform: scale(.6);
+        }
+
+        50% {
+            transform: scale(.7);
+        }
+
+        100% {
+            transform: scale(.6);
+        }
+    }
+
+
+    .logo {
+        width: 60px;
+        border-radius: 60%;
+        height: 60px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-left {
+        display: flex;
+        gap: 12px;
+        height: 90px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    .header.scrolled {
+        transform: scale(0.92);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    }
+
+
+    .navigation {
+        text-align: center;
+        margin-top: 15px;
+        margin-right: 7px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 17px;
+    }
+
+    .navigation a {
+        text-decoration: none;
+
+    }
+
+    .navigation a {
+        position: relative;
+        color: #000;
+        font-size: 12px;
+        padding: 10px 16px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        transition:
+            background 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+
+    .navigation a:hover {
+        background: rgba(255, 255, 255, 0.22);
+        box-shadow:
+            inset 0 2px 4px rgba(255, 255, 255, 0.35),
+            inset 0 -3px 6px rgba(0, 0, 0, 0.25);
+
+    }
+
+    a:hover::after {
+        width: 100%;
+
+    }
+
+    nav a:hover {
+        color: #00a300;
+    }
+
+    section {
+        width: 100%;
+        margin: 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 140px 25px;
+    }
+
+    section:her {
+        transform: translateY(-15px);
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .comm {
+        color: white;
+        text-align: center;
+    }
+
+    .inspi {
+        color: white;
+
+    }
+
+
+    .footer {
+        height: 10vh;
+        text-align: center;
+        background: linear-gradient(5deg, #ff8c42, white);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .7);
+        z-index: 0;
+    }
+
+    .footer h4 {
+        font-size: 15px;
+        font-weight: 100;
+        color: white;
+        margin-top: 30px;
+        z-index: 1;
+        position: relative;
+    }
+
+
+    .images {
+        overflow: hidden;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        max-width: 100%;
+        width: 2200px;
+        padding: 30px 20px;
+        transition: all .3s ease;
+
+    }
+
+    .display1::-webkit-scrollbar {
+        display: none;
+    }
+
+    .images::-webkit-scrollbar {
+        display: none;
+    }
+
+    .display1 {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px 30px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(15px);
+        transition: .3s;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+    }
+
+    .display2 {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px 30px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+        transition: .3s;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .display3 {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px 30px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+        transition: .3s;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .display4 {
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px 30px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+        transition: .3s;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .display3 img {
+        width: 300px;
+        height: 200px;
+    }
+
+
+    img {
+        width: 300px;
+        height: 200px;
+        margin-right: 2px;
+        border-radius: 10px;
+        transition: .3s;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    .title {
+        margin-bottom: 10px;
+
+    }
+
+
+    .image-row {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 10px;
+    }
+
+    .image-row::-webkit-scrollbar-track {
+        background: #ffd699;
+        border-radius: 5px;
+    }
+
+    .image-row::-webkit-scrollbar-thumb {
+        background: #00a300;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .image-row::-webkit-scrollbar-thumb:hover {
+        background: #00a300;
+    }
+
+    .image-row {
+        scrollbar-width: thin;
+        scrollbar-color: #00a300 #ffd699;
+
+    }
+
+    .image-row img:hover {
+        transform: scale(1.2);
+    }
+
+    .display1:hover,
+    .display2:hover,
+    .display3:hover,
+    .inspirational-wrapper:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 900px;
+        border-radius: 10px;
+        animation: zoom 0.3s ease;
+
+    }
+
+
+    @keyframes zoom {
+        from {
+            transform: scale(0.7);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .scrolling-wrapper {
+        overflow: hidden;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .scrolling-wrapper1 {
+        overflow: hidden;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #image-row {
+        display: flex;
+        gap: 10px;
+        width: max-content;
+        animation: scroll-left 30s linear infinite;
+
+    }
+
+
+    #mayor {
+        display: flex;
+        width: max-content;
+        animation: scroll-left1 30s linear infinite;
+
+    }
+
+    #picture-images {
+        display: flex;
+        width: max-content;
+        animation: scroll-right 30s linear infinite;
+    }
+
+    @keyframes scroll-right {
+        0% {
+            transform: translateX(-50%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    #image-row img,
+    #mayor img,
+    #picture-images img {
+        object-fit: cover;
+        border-radius: 3px;
+        transform: scale(1.06);
+    }
+
+    @keyframes scroll-left1 {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    #cheerdance-scroll img {
+        object-fit: cover;
+        transform: scale(1.07);
+
+    }
+
+    #cheerdance-scroll {
+        display: flex;
+        width: max-content;
+        animation: scrolltotheleft 30s linear infinite;
+        overflow-x: hidden;
+
+    }
+
+    .scrolling-wrapper1::-webkit-scrollbar {
+        display: none;
+    }
+
+    @keyframes scrolltotheleft {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+
+
+    }
+
+    .personal-wrapper {
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        min-height: 100%;
+        padding: 30px 25px;
+        background: white;
+
+    }
+
+    .inspirational-wrapper {
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+        background: #ffd699;
+        min-height: 100%;
+        padding: 30px 25px;
+        border-radius: 10px;
+        transition: .3s;
+    }
+
+    .education-wrapper {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+        background: #ffd699;
+        min-height: 100%;
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+
+    .faith-wrapper {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+        background: white;
+        min-height: 100%;
+        padding: 30px 25px;
+        border-radius: 10px;
+    }
+
+    #mayor:hover img:not(:hover) {
+        opacity: 0.3;
+
+    }
+
+    .image-row:hover img:not(:hover) {
+        opacity: .3;
+    }
+
+    #mayor img {
+        width: 250px;
+        height: 300px;
+        transition: all .3s ease;
+    }
+
+    .ma:nth-child(1),
+    .ma:nth-child(3),
+    .ma:nth-child(5),
+    .ma:nth-child(7),
+    .ma:nth-child(9),
+    .ma:nth-child(11),
+    .ma:nth-child(13),
+    .ma:nth-child(15),
+    .ma:nth-child(17),
+    .ma:nth-child(19) {
+        animation: padako 3s ease-in-out infinite;
+    }
+
+    @keyframes padako {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    #mayor img:nth-child(1) {
+        animation-delay: 1s;
+    }
+
+    #mayor img:nth-child(3) {
+        animation-delay: 2s;
+    }
+
+    #mayor img:nth-child(5) {
+        animation-delay: 3s;
+    }
+
+    #mayor img:nth-child(7) {
+        animation-delay: 4s;
+    }
+
+    #mayor img:nth-child(9) {
+        animation-delay: 5s;
+    }
+
+    #mayor img:nth-child(11) {
+        animation-delay: 6s;
+    }
+
+    #mayor img:nth-child(13) {
+        animation-delay: 7s;
+    }
+
+    #mayor img:nth-child(15) {
+        animation-delay: 8s;
+    }
+
+    #mayor img:nth-child(17) {
+        animation-delay: 9s;
+    }
+
+    #mayor img:nth-child(19) {
+        animation-delay: 10s;
+    }
+
+
+
+    #mayor img:hover {
+        transform: scale(1.2);
+    }
+
+    .logout .fa-logout {
+        font-size: 23px;
+        margin-top: 8px;
+        cursor: pointer;
+        position: relative;
+        left: 20px;
+        padding: 7px 7px;
+    }
+
+    .fa-logout:hover {
+        color: #761F21;
+        border-radius: 22px;
+        background: rgba(130, 129, 129, 0.08);
+
+    }
+
+    .unaangginoobold {
+        font-family: "Bebas neue", sans-serif;
+        letter-spacing: 2px;
+    }
+
+    .logoutPop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(6px);
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        display: none;
+    }
+
+    .box-for-logout {
+        display: none;
+        background: white;
+        width: 100%;
+        max-width: 500px;
+        padding: 50px 20px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+        animation: popUp 0.25s ease;
+
+    }
+
+    .headmessageforlog .thankyou {
+        font-size: 20px;
+
+    }
+
+    @keyframes popUp {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .logout-action button {
+        width: 100px;
+        cursor: pointer;
+        padding: 10px;
+        gap: 10px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .logout-action {
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .logout1 {
+        background: #e63946;
+        color: white;
+    }
+
+    .cancel {
+        color: black;
+        background: #ccc;
+    }
+
+    .cancel:hover {
+        background: #b3b3b3;
+    }
+
+    .logout1:hover {
+        background-color: #e60000;
+    }
+
+    .firstcontainer {
+        display: flex;
+        gap: 30px;
+        overflow: hidden;
+    }
+
+    .firstcontainer .container2 {
+        text-align: justify;
+
+    }
+
+    .container2-jesus {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container2 {
+        background: white;
+        padding: 20px 20px;
+        width: 50%;
+        height: 140px;
+        border-radius: 17px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, .2);
+        transition: all .3s ease;
+        overflow: hidden;
+        cursor: pointer;
+        border-top: 5px solid #00a300;
+        overflow: hidden;
+    }
+
+    .container2:hover {
+        transform: translateY(-5%);
+        border-top: 10px solid #00a300;
+        color: #00a300;
+        box-shadow: inset 0 2px 16px rgba(0, 0, 0, .2);
+        box-shadow: 0 2px 15px rgba(0, 163, 0, 0.50);
+    }
+
+    #conaaa {
+        border-top: 5px solid #ffd699;
+
+    }
+
+    #conaaa:hover {
+        transform: translateY(-5%);
+        border-top: 10px solid #ffd699;
+
+    }
+
+    .display0 {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        gap: 20px;
+        padding: 20px 30px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+        transition: .3s;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        margin-top: 10px;
+
+    }
+
+
+    .display0 img {
+        border-radius: 4px;
+        transform: scale(1.02);
+        margin-right: 8px;
+        width: 230px !important;
+        height: 270px !important;
+    }
+
+    .display0 .personal-images::-webkit-scrollbar {
+        display: none;
+    }
+
+    .display0 {
+        background: #ffd699;
+    }
+
+
+
+    .display0 img:hover {
+        transform: scale(1.08);
+    }
+
+    #pictures-images {
+        display: flex;
+
+    }
+
+    #picture-images .perme {
+        height: 280px;
+        width: 350px;
+    }
+
+
+    .image-row .cheer {
+        width: 300px;
+        height: 200px;
+    }
+
+    .inspirational-wrapper .title {
+        text-align: center;
+        margin-bottom: 5px;
+        color: #00a300;
+
+    }
+
+    .title .verse1,
+    .verse2 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+    }
+
+    #honoryour {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        text-align: center;
+        color: #00a300;
+    }
+
+    .inspirational-wrapper .title1 {
+        color: black;
+    }
+
+    #verse2 {
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    video {
+        width: 400px;
+        height: 200px;
+        border-radius: 10px;
+        background: #ffd699;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, .2);
+        transition: all .3s ease;
+        cursor: pointer;
+    }
+
+    .inspirational-wrapper #video-row {
+        padding: 30px 10px;
+        margin: 20px auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .inspirational-wrapper .image-row {
+        height: 100%;
+    }
+
+    #video-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container {
+        display: flex;
+        gap: 15px;
+    }
+
+    .caption p {
+        color: #00a300;
+
+    }
+
+    .image-row .me {
+        height: 300px;
+    }
+
+    .faith-wrapper .image-row img {
+
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .faith-wrapper {
+        background: #ffd699;
+    }
+
+
+    .message-faith {
+        margin-top: 70px;
+    }
+
+    .message-p {
+        color: #00a300;
+        font-size: 18px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+        font-weight: bold;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .d {
+        margin-left: 210px;
+    }
+
+    .faith-wrapper .head-mess h1 {
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .9);
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 20px;
+        font-size: 28px;
+        letter-spacing: 2px;
+        color: #ffd699;
+    }
+
+    .header-message h1 {
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .9);
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 2px;
+        color: #ffd699;
+    }
+
+    .educational-captions h1 {
+        text-align: center;
+        font-family: 'Poppins', 'Playfair Display', serif;
+        font-weight: 600;
+        font-size: 27px;
+        letter-spacing: 2px;
+        color: #ffdd87;
+        background: radial-gradient(circle at top left, #ffd699, #ff8c42);
+        -webkit-background-clip: text;
+        background-clip: none;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        border-radius: 12px;
+        margin: 0;
+    }
+
+    .comm-message h1,
+    .display1 h1 {
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .9);
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 5px;
+        font-size: 30px;
+        color: #ffd699;
+        margin-bottom: 20px;
+    }
+
+    .per-message h1 {
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .9);
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 5px;
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 43px;
+    }
+
+
+    h2 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 38px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 30px;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+    }
+
+
+    .personal {
+        position: absolute;
+        opacity: 0;
+        animation: slideAnimation 4s infinite;
+        transition: all 3s ease;
+
+    }
+
+    .comm {
+        position: absolute;
+        opacity: 0;
+        animation: slideup 4s infinite;
+        transition: all 3s ease;
+
+    }
+
+    .inspi {
+        position: absolute;
+        opacity: 0;
+        animation: slide 4s infinite;
+        transition: all 3s ease;
+    }
+
+    .edu {
+        position: absolute;
+        opacity: 0;
+        animation: eduslide 4s infinite;
+        transition: all 3s ease;
+    }
+
+
+    .personal:nth-child(1),
+    .comm:nth-child(1),
+    .inspi:nth-child(1),
+    .edu:nth-child(1),
+    .faith1:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .personal:nth-child(2),
+    .comm:nth-child(2),
+    .inspi:nth-child(2),
+    .edu:nth-child(2),
+    .faith1:nth-child(2) {
+        animation-delay: 2s;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .9);
+        color: #ffd699;
+    }
+
+
+
+    .display4,
+    .education-wrapper {
+        transition: all .3s ease;
+    }
+
+    .display4:hover {
+        transform: scale(1.03);
+
+    }
+
+    .inspirational-wrapper:hover,
+    .faith-wrapper:hover,
+    .education-wrapper:hover {
+        transform: scale(1.02);
+    }
+
+    .faith-wrapper {
+        transition: all .3s ease;
+    }
+
+    @keyframes eduslide {
+
+        0%,
+        25% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        30%,
+        70% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+
+        71%,
+        100% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes faithslide {
+
+        0%,
+        25% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        30%,
+        70% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+
+        71%,
+        100% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideAnimation {
+
+        0%,
+        25% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        30%,
+        70% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+
+        71%,
+        100% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideup {
+
+        0%,
+        25% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        30%,
+        70% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+
+        71%,
+        100% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slide {
+
+        0%,
+        25% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        30%,
+        70% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+
+        71%,
+        100% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    }
+
+    .text-switch {
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .faith-animation {
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .comm-switch {
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .inspi-switch {
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .animation-text {
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .per-title {
+        color: #00a300;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-style: italic;
+    }
+
+    .per-message p {
+        text-align: center;
+    }
+
+
+    .images:hover {
+        transform: scale(1.03);
+    }
+
+    .display0:hover {
+        transform: scale(1.02);
+    }
+
+    .corner {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .9);
+        color: #ffd699;
+        font-family: "Playfair Display", serif;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .Savior {
+        height: 350px;
+        margin-top: 10px;
+    }
+
+    b {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+    }
+
+    .me {
+        width: 250px;
+        height: 100px auto;
+        animation: pababa 3s ease-in-out infinite;
+    }
+
+    .me:nth-child(2),
+    .me:nth-child(4),
+    .me:nth-child(6) {
+        animation: pasaka 3s ease-in-out infinite;
+    }
+
+    @keyframes pababa {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(30px);
+
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pasaka {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(20px);
+
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .me:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .me:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .me:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .me:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+
+    .me:nth-child(5) {
+        animation-delay: 0.8s;
+    }
+
+    .me:nth-child(6) {
+        animation-delay: 1s;
+    }
+
+    .me:nth-child(7) {
+        animation-delay: 1.2s;
+    }
+
+    #aspi {
+        padding: 19px 0;
+    }
+
+    .caption2 {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .caption2 img {
+        width: 350px;
+        height: 300px;
+        margin-right: 20px;
+    }
+
+    .caption_2 {
+        flex-direction: column;
+        margin-top: 90px;
+    }
+
+
+    .container1 {
+        background: white;
+        padding: 20px 20px;
+        width: 50%;
+        height: 270px;
+        border-radius: 17px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, .2);
+        transition: all .3s ease;
+        overflow: hidden;
+        cursor: pointer;
+
+    }
+
+    #educational .container1 {
+        border-left: 4px solid #00a300;
+    }
+
+    .container1 p {
+        text-align: justify;
+    }
+
+    #reacts {
+        margin-left: 250px;
+    }
+
+    #tipshow {
+        margin-top: 15px;
+        padding: 30px 20px;
+    }
+
+    #tipshow::-webkit-scrollbar {
+        display: none;
+    }
+
+    .head-tips {
+        color: #ff8c42;
+        font-weight: bold;
+
+    }
+
+    .head-tipss {
+        color: #00a300;
+        font-weight: bold;
+
+    }
+
+    .container1 h5 {
+
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .container1:hover {
+        transform: scale(1.05);
+    }
+
+    #tipshow:hover .container1:not(:hover) {
+        opacity: .2;
+    }
+
+    #faith .container1 {
+        border-top: 6px solid #d7d7d7;
+    }
+
+    #faith .container1:hover {
+        border-bottom: 18px solid #00a300;
+        border-top: none;
+        box-shadow: 0 2px 15px rgba(0, 163, 0, 0.80);
+
+    }
+
+    #educational .container1:hover {
+        box-shadow: 0 2px 15px rgba(0, 163, 0, 0.50);
+        border-left: 18px solid #00a300;
+    }
+
+    #reflection .a {
+        text-align: justify;
+    }
+
+    #tipshow p {
+        font-style: italic;
+    }
+
+    #aspir {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerwords .headerword12 {
+        color: rgba(0, 0, 0, .7);
+        text-shadow: none;
+        letter-spacing: 3px;
+        font-size: 15px;
+
+    }
+
+    .headerwords .headerword13 {
+        color: #00a300;
+        text-shadow: none;
+        letter-spacing: 4px;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .headerword13 {
+        bottom: 8px;
+        position: absolute;
+    }
+
+    .headerwords {
+        margin-bottom: 20px;
+    }
+
+    .justify {
+        text-align: justify;
+    }
+
+    #fullscreen {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        font-size: 20px;
+        z-index: 1001;
+        padding: 7px 7px;
+        border-radius: 22px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        color: #FFFFFF;
+    }
+
+
+    #fullscreen:hover {
+        background: rgba(130, 129, 129, 0.08);
+    }
+</style>
+
+<body>
+
+    <header class="header" id="toppper">
+        <div class="header-left" id="toppper1">
+            <div id="logocontain">
+                <img class="logo" id="Jesuslogo" src="jesus.webp" alt="">
+                <img class="logo" id="tcgctcgc" src="tcgc.jpg" alt="">
+            </div>
+            <div class="headerwords">
+                <h3 class="headerword12">UNA ANG GINOO</h3>
+                <h3 class="headerword13">LIGHT OF THE WORLD</h3>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav class="navinavi">
+                <a href="#reflection">Personal</a>
+                <a href="#community">Community</a>
+                <a href="#portfolio">Inspirational</a>
+                <a href="#educational">Educational</a>
+                <a href="#faith">Faith</a>
+            </nav>
+            <div class="logout">
+                <i id="logout" class="ph ph-sign-out fa-logout"></i>
+            </div>
+        </div>
+
+    </header>
+    <i class="ph ph-arrows-out" id="fullscreen"></i>
+    <section id="reflection">
+
+        <div class="display0">
+            <div class="text-switch">
+                <h2 class="personal">Personal Reflection</h2>
+                <h2 class="personal">Personal Reflection</h2>
+            </div>
+            <div class="per-message">
+                <h1>UNA ANG GINOO – GOD FIRST IN EVERYTHING WE DO</h>
+            </div>
+            <div class="per-message">
+                <p class="per-title">“BUT SEEK FIRST THE KINGDOM OF GOD AND HIS RIGHTEOUSNESS, AND ALL THESE THINGS WILL
+                    BE GIVEN TO YOU
+                    AS WELL.”
+                    — MATTHEW 6:33</p>
+                <div class="firstcontainer">
+                    <p class="container2" id="conaaa">For me, <b class="unaangginoobold">UNA ANG GINOO (GOD FIRST)</b>
+                        means putting God first has always
+                        been a
+                        reminder that
+                        every step I
+                        take should begin with faith. Whether
+                        I am studying, working on school projects, or using technology, I believe that God guides my
+                        thoughts and actions. When I allow Him to lead, I feel more grounded, more responsible, and more
+                        mindful of the choices I make.
+
+                    </p>
+                    <p class="container2" id="conaaa">Technology is a powerful gift that can connect, inform, and
+                        inspire. As a
+                        student and as a
+                        person
+                        guided by values, I believe it is my responsibility to use digital tools wisely. Every post,
+                        message, or share reflects who I am, so I choose to act with honesty, kindness, and respect
+                        online.
+                    </p>
+                </div>
+                <div class="firstcontainer">
+                    <p class="container2">I believe that technology, when guided by faith, can become a tool to inspire,
+                        uplift, and
+                        spread
+                        positivity. Just as our school encourages us to put God first, we can also use social media,
+                        websites, and digital platforms responsibly, sharing messages of hope, kindness, and moral
+                        values.
+                        By reflecting God’s love in our actions, we not only honor Him but also set an example for
+                        others,
+                        creating a community of respect, honesty, and care.</p>
+                    <p class="container2">In our city, our school, and in every step we take, we put God first. Every
+                        decision, every
+                        action,
+                        and every thought begins with seeking His guidance. When we prioritize God, integrity and
+                        responsibility naturally follow both in life and online.</p>
+                </div>
+            </div>
+            <div class="refleword">
+                <div class="inspiration-messa">
+                    <h3 class="corner">SURROUNDED BY GOD’S WORD, WE ARE REMINDED DAILY THAT FAITH LEADS, INSPIRES, AND
+                        STRENGTHENS US.
+                    </h3>
+                </div>
+                <div class="scrolling-wrapper">
+                    <div class="image-row" id="picture-images">
+                        <img class="perme" src="una_ang_ginoo.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo1.jpg" alt="">
+                        <img class="perme" src="God.jpg" alt="">
+                        <img class="perme" src="church.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo2.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo3.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo.4jpg.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo.5jpg.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo.7jpg.jpg" alt="">
+
+                        <img class="perme" src="una_ang_ginoo.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo1.jpg" alt="">
+                        <img class="perme" src="God.jpg" alt="">
+                        <img class="perme" src="church.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo2.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo3.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo.4jpg.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo.5jpg.jpg" alt="">
+                        <img class="perme" src="una_ang_ginoo.7jpg.jpg" alt="">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="community">
+
+        <div class="images">
+            <div class="comm-switch">
+                <h2 class="comm">Community Service and Advocacy</h2>
+                <h2 class="comm">Community Service and Advocacy</h2>
+            </div>
+            <div class="display4">
+
+                <div class="comm-message">
+                    <h1>ALWAYS SHOW KIDNESS TOWARDS OTHERS</h1>
+                    <p class="per-title" style="font-size: 20px;">“THE FRUIT OF THE SPIRIT IS LOVE, JOY, PEACE,
+                        PATIENCE, KINDNESS…” — GALATIANS 5:22</p>
+                </div>
+                <div class="title" id="titletitle">
+                    <p class="justify">Yanong Mayor Ben Sabellano Canama of Tangub City is a
+                        true embodiment of servant leadership, putting God first
+                        in every decision and shining as a beacon of hope for the
+                        community. Guided by faith and compassion, they tirelessly
+                        work to uplift the lives of the people, ensuring that every
+                        initiative reflects kindness, integrity, and love for Tangub City.
+                        Through acts of generosity, community service, and unwavering
+                        dedication, the mayor inspires others to lead with heart, serve
+                        with purpose, and always let the light of God guide their path.
+                        Their example reminds us that leadership rooted in faith and
+                        service can transform communities and illuminate the world
+                        around us.</p>
+                </div>
+                <div class="scrolling-wrapper">
+                    <div class="image-row" id="mayor">
+                        <img class="ma" src="m1.jpg" alt="">
+                        <img class="ma" src="m2.jpg" alt="">
+                        <img class="ma" src="m3.jpg" alt="">
+                        <img class="ma" src="m4.jpg" alt="">
+                        <img class="ma" src="m5.jpg" alt="">
+                        <img class="ma" src="m6.jpg" alt="">
+                        <img class="ma" src="m7.jpg" alt="">
+                        <img class="ma" src="m8.jpg" alt="">
+                        <img class="ma" src="m9.jpg" alt="">
+                        <img class="ma" src="m10.jpg" alt="">
+                        <img class="ma" src="m11.jpg" alt="">
+                        <img class="ma" src="m12.jpg" alt="">
+                        <img class="ma" src="m13.jpg" alt="">
+                        <img class="ma" src="m14.jpg" alt="">
+                        <img class="ma" src="m15.jpg" alt="">
+                        <img class="ma" src="m16.jpg" alt="">
+                        <img class="ma" src="m17.jpg" alt="">
+                        <img class="ma" src="m18.jpg" alt="">
+                        <img class="ma" src="m19.jpg" alt="">
+
+                        <img src="m1.jpg" alt="">
+                        <img src="m2.jpg" alt="">
+                        <img src="m3.jpg" alt="">
+                        <img src="m4.jpg" alt="">
+                        <img src="m5.jpg" alt="">
+                        <img src="m6.jpg" alt="">
+                        <img src="m7.jpg" alt="">
+                        <img src="m8.jpg" alt="">
+                        <img src="m9.jpg" alt="">
+                        <img src="m10.jpg" alt="">
+                        <img src="m11.jpg" alt="">
+                        <img src="m12.jpg" alt="">
+                        <img src="m13.jpg" alt="">
+                        <img src="m14.jpg" alt="">
+                        <img src="m15.jpg" alt="">
+                        <img src="m16.jpg" alt="">
+                        <img src="m17.jpg" alt="">
+                        <img src="m18.jpg" alt="">
+                        <img src="m19.jpg" alt="">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="display1">
+                <div class="title" id="tite">
+                    <h1>EVEN THE SMALLEST HELP CAN CREATE A RIPPLE OF HOPE IN SOMEONE’S LIFE</h1>
+                    <p class="per-title" style="font-size: 20px;">HEBREWS 13:16 — “DO NOT FORGET TO DO GOOD AND TO SHARE
+                        WITH OTHERS, FOR WITH SUCH SACRIFICES GOD IS PLEASED.”</p>
+                    <p class="justify">Tangub City Global College Student Supreme Council helped the residents of
+                        Mantic, Tangub City
+                        after a fire incident — a true example of being the Light of the World, showing responsible
+                        kindness and compassion in times of need.</p>
+
+                </div>
+                <div class="scrolling-wrapper">
+                    <div class="image-row" id="image-row">
+                        <img src="p1.png">
+                        <img src="p2.jpg">
+                        <img src="p3.jpg">
+                        <img src="p4.jpg">
+                        <img src="p5.jpg">
+                        <img src="p6.jpg">
+                        <img src="p7.jpg">
+                        <img src="p8.jpg">
+
+                        <img src="p1.png">
+                        <img src="p2.jpg">
+                        <img src="p3.jpg">
+                        <img src="p4.jpg">
+                        <img src="p5.jpg">
+                        <img src="p6.jpg">
+                        <img src="p7.jpg">
+                        <img src="p8.jpg">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="display2">
+                <div class="title">
+                    <p class="justify"> Tangub City Global College Reserve Officers Training Corps (ROTC) cadets and
+                        cadettes conducted
+                        an outside campus and campus-wide clean-up drive.</p>
+                </div>
+                <div class="image-row">
+
+                    <img src="r1.jpg" alt="">
+                    <img src="r2.jpg" alt="">
+                    <img src="r3.jpg" alt="">
+                    <img src="r4.jpg" alt="">
+                    <img src="r5.jpg" alt="">
+                    <img src="r6.jpg" alt="">
+                    <img src="r7.jpg" alt="">
+                    <img src="r8.jpg" alt="">
+                    <img src="r9.jpg" alt="">
+                    <img src="r10.jpg" alt="">
+                    <img src="r11.jpg" alt="">
+                    <img src="r12.jpg" alt="">
+                    <img src="r13.jpg" alt="">
+
+
+                </div>
+
+            </div>
+            <div class="display3">
+                <div class="title" id="ti">
+                    <p class="justify">Tangub City Global College Reserve Officers' Training Corps cadets and cadettes
+                        voluntarily participated in the simultaneous Blood Letting Activity in support of the Philippine
+                        Army initiative held on August 17, 2025.
+                        Guided by faith in God, they offered not only their blood but also their hearts in service to
+                        others.
+                        This act of compassion shows that through God’s love, even small actions can create a great
+                        impact in saving lives.
+                        In giving selflessly, they became instruments of God’s grace, hope, and healing to those in
+                        need.</p>
+
+                </div>
+                <div class="image-row">
+                    <img src="d1.jpg" alt="">
+                    <img src="d3.jpg" alt="">
+                    <img src="d2.jpg" alt="">
+                    <img src="d4.jpg" alt="">
+                    <img src="d5.jpg" alt="">
+                    <img src="d6.jpg" alt="">
+                    <img src="d7.jpg" alt="">
+                    <img src="d8.jpg" alt="">
+                    <img src="d9.jpg" alt="">
+                    <img src="d10.jpg" alt="">
+                    <img src="d11.jpg" alt="">
+                    <img src="d12.jpg" alt="">
+                    <img src="d13.jpg" alt="">
+                    <img src="d14.jpg" alt="">
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="portfolio">
+
+        <div class="inspirational-wrapper">
+            <div class="inspi-switch">
+                <h2 class="inspi">Inspirational Portfolio</h2>
+                <h2 class="inspi">Inspirational Portfolio</h2>
+            </div>
+            <div class="header-message">
+                <h1>INSPIRE SUCCESS THROUGH FAITH</h1>
+            </div>
+            <div class="title">
+                <p class="verse1">"WHEN THE TIME IS RIGHT, I, THE LORD, WILL MAKE IT HAPPEN." — ISAIAH 60:22</p>
+                <p class="title1" id="justify">When we place God at the center of our goals, every effort becomes
+                    purpose,
+                    every challenge becomes growth, and every achievement becomes a testimony of His grace.
+                    This accomplishment isn’t just a victory—it’s a reminder that with faith, discipline,
+                    and God's guidance, nothing is impossible. Keep going. Keep believing. God makes all
+                    things beautiful in His perfect time.
+                </p>
+
+            </div>
+            <div class="image-row" id="aspi">
+                <img class="me" src="me1.jpg" alt="">
+                <img class="me" src="me4.jpg" alt="">
+                <img class="me" src="me5.jpg" alt="">
+                <img class="me" src="me3.jpg" alt="">
+                <img class="me" src="me2.jpg" alt="">
+                <img class="me" src="me8.jpg" alt="">
+                <img class="me" src="me6.jpg" alt="">
+
+            </div>
+            <div class="image-row" id="aspir">
+
+                <div class="">
+                    <p class="verse1" id="honoryour">"HONOR YOUR FATHER AND YOUR MOTHER, SO THAT YOU MAY LIVE LONG IN
+                        THE LAND THE LORD
+                        YOUR GOD IS GIVING YOU." - EXODUS 20:12</p>
+                    <p class="title1" id="justify" style="text-align: center;">Loving parents are the foundation of
+                        every strong and hopeful future. Through their sacrifices, guidance, and unconditional care,
+                        they shape who we become. Their love is a lifelong blessing that inspires us to grow with
+                        gratitude and purpose.</p>
+                </div>
+                <div class="">
+                    <img class="me" id="parents" src="parents.jpg" alt="">
+                    <img class="me" id="parents" src="parents1.jpg" alt="">
+
+                </div>
+
+            </div>
+
+
+            <div class="title">
+                <p class="verse2">"FOR WITH GOD NOTHING SHALL BE IMPOSSIBLE." — LUKE 1:37 </p>
+                <p class="title1" id="justify">Through dedication, countless practices, and unwavering faith,
+                    we claimed 1st Place in the Cheerdance Competition.
+                    This victory teaches us that when passion meets purpose,
+                    God's light shines through us — inspiring others to keep pushing forward.</p>
+
+            </div>
+            <div class="scrolling-wrapper1">
+                <div class="image-row" id="cheerdance-scroll">
+
+                    <img class="cheer" src="cheer1.jpg" alt="">
+                    <img class="cheer" src="cheer2.jpg" alt="">
+                    <img class="cheer" src="cheer3.jpg" alt="">
+                    <img class="cheer" src="cheer4.jpg" alt="">
+                    <img class="cheer" src="cheer5.jpg" alt="">
+                    <img class="cheer" src="cheer12.jpg" alt="">
+                    <img class="cheer" src="cheer13.jpg" alt="">
+                    <img class="cheer" src="cheer14.jpg" alt="">
+                    <img class="cheer" src="cheer6.jpg" alt="">
+                    <img class="cheer" src="cheer7.jpg" alt="">
+                    <img class="cheer" src="cheer8.jpg" alt="">
+                    <img class="cheer" src="cheer9.jpg" alt="">
+                    <img class="cheer" src="cheer10.jpg" alt="">
+                    <img class="cheer" src="cheer11.jpg" alt="">
+
+                    <img class="cheer" src="cheer1.jpg" alt="">
+                    <img class="cheer" src="cheer2.jpg" alt="">
+                    <img class="cheer" src="cheer3.jpg" alt="">
+                    <img class="cheer" src="cheer4.jpg" alt="">
+                    <img class="cheer" src="cheer5.jpg" alt="">
+                    <img class="cheer" src="cheer12.jpg" alt="">
+                    <img class="cheer" src="cheer13.jpg" alt="">
+                    <img class="cheer" src="cheer14.jpg" alt="">
+                    <img class="cheer" src="cheer6.jpg" alt="">
+                    <img class="cheer" src="cheer7.jpg" alt="">
+                    <img class="cheer" src="cheer8.jpg" alt="">
+                    <img class="cheer" src="cheer9.jpg" alt="">
+                    <img class="cheer" src="cheer10.jpg" alt="">
+                    <img class="cheer" src="cheer11.jpg" alt="">
+
+                </div>
+            </div>
+            <div class="image-row" id="video-row">
+                <div class="caption">
+                    <p class="verse2" id="verse2">"BE STRONG AND COURAGEOUS. DO NOT BE AFRAID; DO NOT BE DISCOURAGED,
+                        FOR THE LORD YOUR GOD WILL BE
+                        WITH YOU WHEREVER YOU GO" — JOSHUA 1:9 </p>
+                </div>
+                <div class="video-container">
+                    <video controls autoplay loop muted src="front.mp4"></video>
+                    <video controls autoplay loop muted src="pyramid.mp4"></video>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="educational">
+
+        <div class="education-wrapper">
+            <div class="animation-text">
+                <h2 class="edu">Educational Page</h2>
+                <h2 class="edu">Educational Page</h2>
+            </div>
+            <div class="educational-captions">
+                <h1>IN A WORLD FULL OF SCREENS, LET YOUR WORDS SHINE WITH KINDNESS.</h1>
+                <p class="per-title">"SPREAD WISDOM AND UNDERSTANDING, FOR KNOWLEDGE GIVEN WITH A KIND HEART CAN CHANGE
+                    LIVES.” – PROVERBS 4:7</p>
+            </div>
+            <div class="image-row" id="information-img">
+                <img src="edu_on3.jpg" alt="">
+
+                <div class="caption1" id="cappac">
+                    <p class="justify">Spending time online can be fun and productive, but it’s important to remember
+                        that your
+                        health
+                        comes first. Take regular breaks from screens, stretch, and breathe. Prioritize sleep and
+                        real-life connections to keep your mind and body balanced.</p>
+                    <p class="justify">Your mental peace is more valuable than the latest trend or viral content. Step
+                        away from
+                        social
+                        media when you feel stressed, and engage in activities that refresh your mind and spirit.
+                    </p>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="caption2" id="information-img1">
+                    <img src="edu_on4.jpg" alt="">
+                    <div class="caption_2" id="capcap">
+                        <p class="justify">Every word you type online has an impact. Choosing kindness over criticism
+                            can make someone’s
+                            day better and create a more positive digital environment. Avoid engaging in cyberbullying,
+                            and think before you comment or share.</p>
+                        <p class="justify" id="nea">Social media is a space to connect, not to hurt. Respect others’
+                            opinions, celebrate their
+                            successes, and offer encouragement. A single positive message can create a ripple of
+                            goodwill.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="image-row" id="heart">
+                <div class="caption_2" id="capcapcap">
+                    <p class="justify">Every reaction you give online shapes someone’s day—choose the one that spreads
+                        kindness.</p>
+                    <p class="justify">Spread positivity with every click. The internet needs more voices that heal, not
+                        hurt.
+                    </p>
+                    <p class="justify">React with kindness, because you never know what someone is going through behind
+                        the screen.</p>
+                </div>
+                <div class="caption2" id="reacts">
+                    <img class="reactsss" src="edu_on1.jpg" alt="">
+                </div>
+            </div>
+            <div class="image-row" id="tipshow">
+                <div class="container1" id="cona">
+                    <h5 class="head-tipss">PRACTICE DIGITAL KINDNESS</h5>
+                    <p>Kindness is the foundation of healthy online communication.
+                        Choose respectful, thoughtful words to create a safer and more supportive digital space.</p>
+                </div>
+                <div class="container1" id="cona">
+                    <h5 class="head-tips">BE HONEST IN YOUR DIGITAL CREATIONS</h5>
+                    <p>Online content should reflect truth, integrity, and responsibility.
+                        Do not copy, mislead, or spread false information—create with honesty and purpose.</p>
+                </div>
+                <div class="container1" id="cona">
+                    <h5 class="head-tipss">RESPECT OTHERS IN EVERY ONLINE INTERACTION</h5>
+                    <p>Every comment you post affects real people with real emotions. Treat others with the same dignity
+                        and respect you expect in return.</p>
+                </div>
+                <div class="container1" id="cona">
+                    <h5 class="head-tips">THINK BEFORE YOU CLICK OR POST</h5>
+                    <p>Pause and evaluate your message before sending it.
+                        A responsible digital citizen considers accuracy, empathy, and respect in every action.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faith">
+
+        <div class="faith-wrapper">
+            <div class="faith-animation">
+                <h2 class="faith1">Faith and Technology Integration</h2>
+                <h2 class="faith1">Faith and Technology Integration</h2>
+            </div>
+            <div class="head-mess">
+                <h1>SPREADING POSITIVITY USING TECHNOLOGY</h1>
+                <p class="justify">I want to be someone who spreads positivity, avoids negativity, and protects myself
+                    and
+                    others by
+                    thinking before I click. Using technology responsibly is not just about following rules—it is about
+                    showing integrity and being a good example in the digital world.</p>
+            </div>
+            <div id="asd" class="image-row">
+                <img src="tech.jpg" alt="">
+                <img src="tech4.jpg" alt="">
+                <div class="message-faith" id="uniqeudiv">
+                    <p class="message-p" id="unique1"> “LET YOUR LIGHT SHINE BEFORE OTHERS, THAT THEY MAY SEE YOUR GOOD
+                        DEEDS AND
+                        GLORIFY YOUR FATHER IN HEAVEN.” — MATTHEW 5:16</p>
+                    <p id="unique1">I developed this website to use technology as a force for good, to inspire,
+                        uplift, and spread positivity, staying rooted in faith even in our
+                        modern world.
+
+                    </p>
+                </div>
+            </div>
+            <div id="two" class="image-row">
+                <div class="message-faith" id="newuni">
+                    <p class="message-p" id="unique1"> TRUST IN THE LORD WITH ALL YOUR HEART AND LEAN NOT ON YOUR OWN
+                        UNDERSTANDING.” <br> — PROVERBS 3:5</p>
+                    <p id="unique1">Spreading a little light and positivity today, let’s encourage one another, stay
+                        hopeful, and
+                        <br>
+                        keep faith at the center of everything we do!
+                    </p>
+                </div>
+                <div class="d">
+                    <img src="tech2.png" alt="">
+                </div>
+
+            </div>
+            <div class="image-row" id="asdasd">
+                <img src="tech3.jpg" alt="">
+                <div class="message-faith">
+                    <p class="message-p" id="unique1"> "REJOICE ALWAYS, PRAY WITHOUT CEASING, GIVE THANKS IN ALL
+                        CIRCUMSTANCES;
+                        FOR THIS IS THE WILL OF GOD IN CHRIST JESUS FOR YOU." — 1 THESSALONIANS 5:16-18</p>
+                    <p id="unique1">Using the power of technology to spread positivity, hope, and light—one click at a
+                        time.</p>
+                </div>
+            </div>
+            <div class="image-row" id="tipshow">
+                <div class="container1">
+                    <h5 class="head-tipss">SHARE POSITIVE CONTENT</h5>
+                    <p>Use your social media to post uplifting messages, encouraging verses, or inspiring reflections
+                        that brighten someone’s day.</p>
+                </div>
+                <div class="container1">
+                    <h5 class="head-tips">USE TECHNOLOGY TO SERVE OTHERS</h5>
+                    <p>Create helpful guides, organize online prayer groups, or assist classmates through digital tools
+                        and platforms.</p>
+                </div>
+                <div class="container1">
+                    <h5 class="head-tipss">PRACTICE DIGITAL DISCERNMENT</h5>
+                    <p>Think carefully before sharing information. Choose truth, wisdom, and integrity in everything you
+                        upload.</p>
+                </div>
+                <div class="container1">
+                    <h5 class="head-tips">BE A LIGHT ONLINE</h5>
+                    <p>Use your creativity—graphics, blogs, videos—to spread kindness, compassion, and faith in a world
+                        full of noise and negativity.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+
+
+    <div id="pop1" class="logoutPop">
+        <div id="pop2" class="box-for-logout">
+            <div class="headmessageforlog">
+                <h1 class="thankyou">Thank you for visiting my website</h1>
+            </div>
+            <label>Are you sure you want to logout?</label>
+            <div class="logout-action">
+                <button class="logout1" onclick="proceedtoLogout()">Logout</button>
+                <button class="cancel" onclick="canceling()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="footer">
+    <h4>Developed by Johncel Vic Ditchon | © 2025</h4>
+
+</footer>
+
+<script src="main.js"></script>
+
+</html>
